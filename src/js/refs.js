@@ -1,5 +1,5 @@
 // const refs = {
-//   countriesName: document.querySelector('.js-country-information'),
+//   searchImage: document.querySelector('.gallery'),
 //   searchField: document.querySelector('.js-search-field'),
 // };
 // export default refs;
