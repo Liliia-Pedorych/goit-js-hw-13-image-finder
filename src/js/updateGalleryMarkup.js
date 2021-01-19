@@ -1,8 +1,15 @@
-// import imagesTpl from '../templates/gallery.hbs';
-// import refs from './refs';
+import imagesTpl from '../templates/gallery.hbs';
+import refs from './refs';
 
 // import { showNotificationToMany, showNotificationFail } from './notification';
 
+function galleryList(hits) {
+  const markup = imagesTpl(hits);
+  refs.searchImage.insertAdjacentHTML('beforeend', markup);
+}
+
+export default galleryList;
+//===============================================================
 // function updateGalleryMarkup(data) {
 
 //   if (data.length > 10) {

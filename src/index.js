@@ -1,20 +1,13 @@
 import './styles.css';
-// import fetchCountriesName from './js/fetchCountries';
-// import updateCountriesMarkup from './js/updateCountriesMarkup';
-// import refs from './js/refs';
-// // import { showNotificationFail } from './js/notification';
+import refs from './js/refs';
+import fetchImages from './js/fetchImages';
+import galleryList from './js/updateGalleryMarkup';
 
-// refs.searchField.addEventListener(
-//   'input',
-//   _.debounce(event => {
-//     const countryName = event.target.value;
-//     // console.log(event.target.value);
+refs.searchField.addEventListener('submit', event => {
+  event.preventDefault();
+  const inputValue = event.currentTarget.elements.query.value;
 
-//     refs.countriesName.innerHTML = '';
-//     // if (refs.countriesName !== countryName) {
-//     //   showNotificationFail();
-//     // }
-
-//     fetchCountriesName(countryName).then(updateCountriesMarkup);
-//   }, 1000),
-// );
+  refs.searchImage.innerHTML = '';
+  event.currentTarget.reset();
+  fetchImages(inputValue).then(galleryList);
+});
