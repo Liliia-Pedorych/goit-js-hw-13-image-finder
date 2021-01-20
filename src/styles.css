@@ -25,10 +25,15 @@ body {
   margin-left: auto;
 }
 
+li {
+  list-style: none;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 
 img {
@@ -39,12 +44,16 @@ img {
 
 .stats {
   display: flex;
+  flex-grow: 1;
+  /* align-items: center;
+  justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 0; */
 }
 .stats-item {
-  display: flex;
-  font-size: 14px;
+  display: grid;
+  text-align: center;
+  margin-right: 20px;
 }
 .material-icons {
   max-width: 15px;

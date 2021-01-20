@@ -17,5 +17,15 @@ refs.searchField.addEventListener('submit', event => {
 });
 
 refs.loadMoreBtn.addEventListener('click', () => {
-  apiService.fetchImages().then(galleryList);
+  apiService.fetchImages().then(hits => {
+    galleryList(hits);
+    console.log(document.documentElement.offsetHeight);
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.documentElement.offsetHeight,
+        left: 100,
+        behavior: 'smooth',
+      });
+    }, 500);
+  });
 });
