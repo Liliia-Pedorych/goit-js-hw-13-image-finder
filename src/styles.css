@@ -17,11 +17,6 @@ body {
   padding: 20px;
 }
 
-/* .search-field-container {
-  display: block;
-  text-align: center;
-}
-
 .container {
   text-align: center;
   padding-right: 15px;
@@ -29,6 +24,38 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+img {
+  display: block;
+  max-width: 300px;
+  margin-right: 5px;
+}
+
+.stats {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.stats-item {
+  display: flex;
+  font-size: 14px;
+}
+.material-icons {
+  max-width: 15px;
+}
+
+/* .search-field-container {
+  display: block;
+  text-align: center;
+}
+
+
 
 .title {
   font-size: 36px;
@@ -68,10 +95,7 @@ p {
   font-weight: 400;
 }
 
-.img-flag {
-  max-width: 350px;
-  padding: 20px;
-}
+
 
 .country-information {
   padding: 10px;

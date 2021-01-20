@@ -20,18 +20,23 @@
     />
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="query"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-    </form>
-    <section>
-      <ul class="gallery">
-        <!-- Список <li> с карточками изображений -->
-      </ul>
-    </section>
+    <main class="container">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </form>
+      <section>
+        <ul class="gallery">
+          <!-- Список <li> с карточками изображений -->
+        </ul>
+        <button type="button" class="btn" data-action="load-more">
+          Load more
+        </button>
+      </section>
+    </main>
   </body>
 </html>
