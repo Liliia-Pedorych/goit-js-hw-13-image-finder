@@ -54,7 +54,8 @@ img {
 
 .stats {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   max-width: 300px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -66,9 +67,6 @@ img {
   margin-right: 20px;
   margin-top: 0;
   margin-bottom: 0;
-}
-.material-icons {
-  max-width: 15px;
 }
 
 .is-hidden {
