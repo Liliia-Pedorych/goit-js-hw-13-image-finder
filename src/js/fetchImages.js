@@ -1,5 +1,3 @@
-// import { showNotificationFail } from './notification';
-
 function fetchImages(searchQuery, page = 1) {
   const apiKey = '19832494-5cd14cdef5946ada4556f0091';
 

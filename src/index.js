@@ -1,7 +1,6 @@
 import './styles.css';
 import refs from './js/refs';
 import apiService from './js/apiService';
-// import fetchImages from './js/fetchImages';
 import galleryList from './js/updateGalleryMarkup';
 
 refs.searchField.addEventListener('submit', event => {
@@ -13,13 +12,18 @@ refs.searchField.addEventListener('submit', event => {
 
   apiService.resetPage();
 
-  apiService.fetchImages().then(galleryList);
+  if (apiService.query != '') {
+    apiService.fetchImages().then(hits => {
+      galleryList(hits);
+      refs.loadMoreBtn.classList.remove('is-hidden');
+    });
+  }
 });
 
 refs.loadMoreBtn.addEventListener('click', () => {
   apiService.fetchImages().then(hits => {
     galleryList(hits);
-    console.log(document.documentElement.offsetHeight);
+
     setTimeout(() => {
       window.scrollTo({
         top: document.documentElement.offsetHeight,
